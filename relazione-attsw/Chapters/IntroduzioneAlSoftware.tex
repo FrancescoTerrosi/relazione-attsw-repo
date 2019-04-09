@@ -9,7 +9,7 @@ Lo sviluppo del software è iniziato definendo dei requisiti sull'orario della s
 	\item La sala prove in questione offre 3 sale, prenotabili per turni di 2 ore e 30 minuti
 	\item Ciascuna sala è prenotabile per qualunque orario (il minutaggio non deve necessariamente essere un multiplo di 30, la sala prove rimane aperta h24)
 	\item È possibile effettuare una prenotazione fino a 5 minuti prima dell'orario specificato
-	\item Tutte le prenotazioni richiedenti un'orario $o$, $o <= ora\ attuale\ +\ 5\ minuti$ vengono rifiutate
+	\item Tutte le prenotazioni richiedenti un orario $O$, $O \leq ora\ attuale\ +\ 5\ minuti$ vengono rifiutate
 	\item Soltanto gli utenti registrati nel sistema possono effettuare le prenotazioni
 	\item Le prenotazioni vengono associate in maniera univoca all'username scelto in fase di registrazione
 	\item Non possono esistere due utenti con lo stesso username
@@ -23,6 +23,7 @@ Il software è stato implementato utilizzando diverse tecniche di programmazione
 	\includegraphics[width=\textwidth]{img/packages.png}
 	\captionof{figure}{Gerarchia dei pacchetti}
 \end{minipage}
+\newline
 
 L'applicazione è stata sviluppata utilizzando il \textsl{Framework Spring Boot}, grazie al quale è stata facilitata l'implementazione e la gestione di un database MongoDB (che consiste di due differenti repository: uno per gli utenti e uno per le prenotazioni) e l'esposizione dei metodi offerti dai vari \textsl{services} grazie ai Web Controller.\newline\newline
 Le operazioni sui repository sono implementati appunto dalle classi contenute in $org.unifi.ft.rehearsal.services$: BandService e Scheduler.\newline
