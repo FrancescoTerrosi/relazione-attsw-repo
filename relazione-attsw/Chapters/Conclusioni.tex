@@ -1,0 +1,30 @@
+\chapter{Conclusioni}
+
+Lo scopo di questo progetto era quello di condurre un'analisi più approfondita sulla possibilità di riconoscere gli utenti e le frasi da loro pronunciate durante una conversazione Skype e di riuscire a distinguere fra videochiamate, conferenze e chiamate fra due utenti.\newline
+Purtroppo i dati riportati ci dimostrano come alcuni di questi obiettivi siano impossibili da raggiungere, in particolare non è stato possibile:
+
+\begin{enumerate}
+\item Identificare elementi esterni alla conversazione
+\item Identificare tratti distintivi nella parlata di un utente
+\item Stabilire la lingua della conversazione (a meno di utilizzo di software come Skypegrep)
+\end{enumerate}
+
+L'impossibilità di questi 3 punti (salvo casi specifici per il punto (1)) è da attribuire quasi completamente al codec a bitrate variabile utilizzato da Skype per la cattura dei messaggi. In questo modo è impossibile riconoscere uno specifico utente, nè è possibile catturare rumori esterni. Rimane tuttavia possibile identificare \emph{specifiche} frasi all'interno di una conversazione.\newline\newline
+
+In ogni caso sono stati ottenuti risultati interessanti per quanto riguarda:
+
+\begin{enumerate}
+\item La possibilità di distinguere se è in corso una chiamata, una videochiamata o una conferenza
+\item La possibilità di capire se vi sono fonti di rumore \emph{costante} esterno alla conversazione
+\item A seguito di un adeguato train-set, la possibilità nella maggior parte dei casi identificare le frasi o le parole pronunciate
+\end{enumerate}
+
+Per quanto riguarda il terzo punto è importante ribadire che non è esattamente la frase ad essere riconosciuta (ovvero non è possibile, analizzando i pacchetti, capire \emph{quale} frase sia stata pronunciata) ma è possibile osservare la presenza di determinate sequenze di pacchetti, riconducibili a frasi specifiche.\newline\newline
+Nel condurre gli esperimenti, come già è stato detto all'inizio di questo documento, sono stati applicati dei filtri con \textsl{Wireshark} in modo tale da ridurre al minimo le fonti di incertezza sui dati. È utile notare tuttavia che:
+
+\begin{itemize}
+\item È possibile che un'elevata latenza di rete disturbi la qualità delle osservazioni
+\item Nel monitoraggio delle conferenze non è sempre possibile stabilire il destinatario dei pacchetti, costringendo ad applicare meno filtri e quindi a catturare anche pacchetti non relativi al traffico Skype
+\item Nell'analisi delle videochiamate e delle conferenze sono stati stabiliti dei bound arbitrari per la cattura dei pacchetti audio. Per quanto i risultati fossero in linea con le precedenti osservazioni non è da escludere che alcuni pacchetti siano stato involontariamente esclusi
+\end{itemize}
+
