@@ -1,6 +1,6 @@
 \chapter{Introduzione al Software}
 
-\subsection{Descrizione e Vincoli}
+\section{Descrizione e Vincoli}
 
 Il software sviluppato implementa un web service per la gestione delle prenotazioni di una sala prove.\newline
 Lo sviluppo del software è iniziato definendo dei requisiti sull'orario della sala e sulla definizione delle richieste di prenotazione valide. In particolare:
@@ -15,12 +15,13 @@ Lo sviluppo del software è iniziato definendo dei requisiti sull'orario della s
 	\item Non possono esistere due utenti con lo stesso username
 \end{itemize}
 
-\subsection{Panoramica del Software}
+\section{Panoramica del Software}
 
-Il software è stato implementato seguendo una filosofia di sviluppo modulare. Possiamo dividere i vari pacchetti in pacchetti di \textbf{utilità} (model, exceptions, configurations\dots) e pacchetti di \textbf{servizio} (services, repository, web)
+Il software è stato implementato utilizzando diverse tecniche di programmazione fra cui il \textsl{Test-Driven-Development}, \textsl{Build-Automation} (\textsl{Maven} e \textsl{Gradle}), \textsl{Continuous Integration}\dots seguendo una filosofia di sviluppo modulare. Possiamo dividere i vari pacchetti in pacchetti di \textbf{utilità} (model, exceptions, configurations\dots) e pacchetti di \textbf{servizio} (services, repository, web)
 
 \begin{minipage}{\linewidth}
 	\includegraphics[width=\textwidth]{img/packages.png}
+	\captionof{figure}{Gerarchia dei pacchetti}
 \end{minipage}
 
 L'applicazione è stata sviluppata utilizzando il \textsl{Framework Spring Boot}, grazie al quale è stata facilitata l'implementazione e la gestione di un database MongoDB (che consiste di due differenti repository: uno per gli utenti e uno per le prenotazioni) e l'esposizione dei metodi offerti dai vari \textsl{services} grazie ai Web Controller.\newline\newline
