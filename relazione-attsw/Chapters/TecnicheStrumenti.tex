@@ -47,21 +47,48 @@ Il file in cui vengono definite le dipendenze del progetto, i plugin e altre con
 \vspace{1cm}
 \begin{minipage}{\linewidth}
 	\includegraphics[width=\textwidth]{img/build-gradle.png}
-	\captionof{figure}{Estratto del file build.gradle}
+	\captionof{figure}{Esempio di file build.gradle}
 \end{minipage}
 
 \pagebreak
 Gradle permette inoltre di definire dei \textsl{task} personalizzati che possono essere inseriti all'interno del task graph (e quindi eseguiti ogni volta che viene eseguita la build del progetto. In questo caso possiamo immaginarli, con un certo livello di astrazione, come un \textsl{goal} di Maven che viene attaccato a una fase) oppure eseguirli in maniera autonoma.\newline\newline
 Uno degli aspetti fondamentali nella definizione di nuovi task Gradle è la loro indipendenza. È buona pratica definire un file .gradle apposito in cui vengono dichiarati i \textsl{source sets} e le \textsl{dipendenze} necessarie al compimento del task, di modo tale che possa essere eseguito indipendentemente dagli altri.
-È comunque possibile definire un'ordinamento fra essi, utilizzando le seguenti istruzioni:
+È comunque possibile definire un ordinamento fra essi, utilizzando i comandi \textsl{dependsOn} e \textsl{finalizedBy}.\newline\newline
+\vspace{1cm}
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/itest-gradle.png}
+	\captionof{figure}{Esempio di task definito dall'utente nel file itest.gradle}
+\end{minipage}
+\newline\newline
+Un altro degli aspetti fondamentali di Gradle è il massiccio utilizzo del Gradle Wrapper.\newline
+Il wrapper consente di poter effettuare build gradle senza averlo installato sulla propria macchina. Lavorando in team di sviluppo il vantaggio è ancora maggiore in quanto assicura che tutti i membri effettuino le build utilizzando la stessa versione di Gradle, senza bisogno di alcuna gestione aggiuntiva.\newline\newline
+Tutti i plugin e le dipendenze Maven del progetto sono state ritradotte in Gradle, per assicurare l'uniformità delle due versioni. Su travis, la build viene eseguita con il seguente comando:\newline
 
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/gradle-build.png}
+	\captionof{figure}{Viene invocato il gradle wrapper per inizializzare la versione corretta di Gradle con cui eseguire la build del progetto}
+\end{minipage}
+\newline\newline
+I task che vengono eseguiti sono:
 \begin{itemize}
-	\item taskX.dependsOn taskY
-		\begin{itemize}
-			\item[$\rightarrow$] Prima di ogni esecuzione di taskX, viene eseguito taskY
-		\end{itemize}
-	\item taskY.finalizedBy taskZ
-		\begin{itemize}
-			\item[$\rightarrow$] Al termine di ogni esecuzione di taskY, viene eseguito taskZ
-		\end{itemize}
+	\item build
+	\begin{itemize}
+		\item[$\rightarrow$] Configura la build e calcola il task graph, compila i file sorgente andando a scaricare le dipendenze, esegue i test e produce il fatjar dell'applicazione
+	\end{itemize}
+	\item jacocoTestReport
+	\begin{itemize}
+		\item[$\rightarrow$] Esegue JaCoCo per calcolare la code coverage
+	\end{itemize}
+	\item coveralls
+	\begin{itemize}
+		\item[$\rightarrow$] Cerca il file .xml prodotto da JaCoCo e invia i risultati a coveralls
+	\end{itemize}
+	\item sonarqube
+	\begin{itemize}
+		\item[$\rightarrow$] Effettua l'analisi su SonarCloud
+	\end{itemize}
 \end{itemize}
+È possibile apprezzare come le operazioni per assemblare e testare effettivamente il progetto siano tutte racchiuse nel comando (task) \textsl{build}.
+
+\section{Continuous Integration}
+

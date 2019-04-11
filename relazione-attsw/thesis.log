@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.14)  11 APR 2019 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.14)  11 APR 2019 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2140,7 +2140,12 @@ LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <12> not available
 (Font)              Font shape `T1/pplj/m/it' tried instead on input line 20.
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <12> not available
 (Font)              Font shape `T1/pplj/b/n' tried instead on input line 20.
- [3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+[3]
 <img/packages.png, id=92, 413.545pt x 235.88126pt>
 File: img/packages.png Graphic file (type png)
 <use img/packages.png>
@@ -2177,18 +2182,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--106
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[4 <./img/packages.png>]
+[4 <./img/packages.png>] [5]
 \openout2 = `Chapters/TecnicheStrumenti.aux'.
 
- (./Chapters/TecnicheStrumenti.tex
-chapter 2.
-[5
+ (./Chapters/TecnicheStrumenti.tex [6
 
 
 
 
 ]
-<img/maven-goals.png, id=103, 503.8825pt x 62.2325pt>
+chapter 2.
+[7]
+<img/maven-goals.png, id=112, 503.8825pt x 62.2325pt>
 File: img/maven-goals.png Graphic file (type png)
 <use img/maven-goals.png>
 Package pdftex.def Info: img/maven-goals.png  used on input line 36. on input l
@@ -2223,8 +2228,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--46
 
  []
 
-[6 <./img/maven-goals.png>]
-<img/build-gradle.png, id=112, 602.25pt x 450.68375pt>
+[8 <./img/maven-goals.png>]
+<img/build-gradle.png, id=120, 602.25pt x 450.68375pt>
 File: img/build-gradle.png Graphic file (type png)
 <use img/build-gradle.png>
 Package pdftex.def Info: img/build-gradle.png  used on input line 49. on input 
@@ -2242,15 +2247,83 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 48--52
 []$[]$ 
  []
 
-[7 <./img/build-gradle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 54--57
+[9 <./img/build-gradle.png>]
+<img/itest-gradle.png, id=126, 667.49374pt x 500.87125pt>
+File: img/itest-gradle.png Graphic file (type png)
+<use img/itest-gradle.png>
+Package pdftex.def Info: img/itest-gradle.png  used on input line 59. on input 
+line 59.
+Package pdftex.def Info: Requested size: 384.1122pt x 288.23564pt on input line
+ 59.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 60.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--66
 
  []
 
-) [8]
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--66
+
+ []
+
+
+Overfull \hbox (2.65703pt too wide) in paragraph at lines 54--66
+ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--66
+
+ []
+
+[10 <./img/itest-gradle.png>]
+<img/gradle-build.png, id=132, 477.785pt x 31.11626pt>
+File: img/gradle-build.png Graphic file (type png)
+<use img/gradle-build.png>
+Package pdftex.def Info: img/gradle-build.png  used on input line 68. on input 
+line 68.
+Package pdftex.def Info: Requested size: 384.1122pt x 25.01552pt on input line 
+68.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 69.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 67--73
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--73
+
+ []
+
+) [11 <./img/gradle-build.png>]
 \openout2 = `Chapters/Conclusioni.aux'.
 
- (./Chapters/Conclusioni.tex
+ (./Chapters/Conclusioni.tex [12
+
+
+
+
+]
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -2267,12 +2340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-[9
-
-
-
-
-]) [10]
+[13]) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./thesis.aux (./titlePage.aux)
@@ -2284,11 +2352,11 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 432E57638F8746BA022BD9BF00DEE052;554.
  ) 
 Here is how much of TeX's memory you used:
- 37791 strings out of 492990
- 719006 string characters out of 6135005
+ 37816 strings out of 492990
+ 719380 string characters out of 6135005
  907167 words of memory out of 5000000
- 40340 multiletter control sequences out of 15000+600000
- 611434 words of font info for 365 fonts, out of 8000000 for 9000
+ 40352 multiletter control sequences out of 15000+600000
+ 611715 words of font info for 369 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,73p,10405b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2300,10 +2368,10 @@ nts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (11 pages, 209476 bytes).
+Output written on thesis.pdf (15 pages, 266921 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 76905 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 76915 words of extra memory for PDF output out of 89155 (max. 10000000)
 
