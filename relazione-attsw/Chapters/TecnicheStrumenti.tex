@@ -21,7 +21,7 @@ Come già detto, sono stati usati due strumenti di build automation:
 \subsection{Maven}
 
 Le specifiche di un progetto Maven vengono definite nel file "pom.xml".\newline
-All'interno di questo file è possibile definire alcune opzioni di configurazione del progetto (nome del gruppo e del progetto, versione di Java\dots) e, soprattutto, definire le dipendenze necessarie al corretto funzionamento del software e plugin che specificano le operazioni da fare durante il processo di build.\newline
+All'interno di questo file è possibile definire alcune opzioni di configurazione del progetto (nome del gruppo e del progetto, versione di Java\dots) e, soprattutto, definire le dipendenze necessarie al corretto funzionamento del software e i plugin che specificano le operazioni da fare durante il processo di build.\newline
 Per adottare una sorta di approccio modulare anche nel processo di build del progetto, sono stati definiti diversi profili all'interno del pom.\newline
 Definire un profilo permette di incapsulare i plugin e le loro configurazioni al suo interno, in modo tale che queste vengano attaccate alla fase appropriata del lifecycle di Maven solamente quando richiesto.\newline
 Per separare le operazione di generazione dei report di \textsl{JaCoCo}, i \textsl{Mutation Tests}, gli \textsl{Integration Tests} e gli \textsl{End to End Tests} sono stati quindi definiti i profili:
@@ -38,3 +38,30 @@ Per separare le operazione di generazione dei report di \textsl{JaCoCo}, i \text
 \end{minipage}
 \newline
 
+\subsection{Gradle}
+
+Gradle è, attualmente, il maggior \textsl{competitor} di Maven per quanto riguarda la build automation.\newline
+La procedura di assemblamento di un software è intrinsecamente diversa: se in Maven abbiamo un ciclo di vita rigido e ben definito, in cui i vari \textsl{goal} vengono eseguiti in un ordine ben definito e in maniera sequenziale, Gradle si basa sulla definizione di \textsl{tasks} (intuitivamente possiamo vederli come un corrispetivo dei \textsl{goal}), il cui ordine di esecuzione viene definito dal \textsl{task graph}, un grafo aciclico che definisce l'ordine di esecuzione dei vari compiti.\newline\newline
+Il file in cui vengono definite le dipendenze del progetto, i plugin e altre configurazioni è il file "build.gradle". Uno dei vantaggi è indubbiamente l'utilizzo di un DSL \textsl{Groovy-like}, al posto del verboso xml utilizzato da Maven.\newline
+
+\vspace{1cm}
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/build-gradle.png}
+	\captionof{figure}{Estratto del file build.gradle}
+\end{minipage}
+
+\pagebreak
+Gradle permette inoltre di definire dei \textsl{task} personalizzati che possono essere inseriti all'interno del task graph (e quindi eseguiti ogni volta che viene eseguita la build del progetto. In questo caso possiamo immaginarli, con un certo livello di astrazione, come un \textsl{goal} di Maven che viene attaccato a una fase) oppure eseguirli in maniera autonoma.\newline\newline
+Uno degli aspetti fondamentali nella definizione di nuovi task Gradle è la loro indipendenza. È buona pratica definire un file .gradle apposito in cui vengono dichiarati i \textsl{source sets} e le \textsl{dipendenze} necessarie al compimento del task, di modo tale che possa essere eseguito indipendentemente dagli altri.
+È comunque possibile definire un'ordinamento fra essi, utilizzando le seguenti istruzioni:
+
+\begin{itemize}
+	\item taskX.dependsOn taskY
+		\begin{itemize}
+			\item[$\rightarrow$] Prima di ogni esecuzione di taskX, viene eseguito taskY
+		\end{itemize}
+	\item taskY.finalizedBy taskZ
+		\begin{itemize}
+			\item[$\rightarrow$] Al termine di ogni esecuzione di taskY, viene eseguito taskZ
+		\end{itemize}
+\end{itemize}
