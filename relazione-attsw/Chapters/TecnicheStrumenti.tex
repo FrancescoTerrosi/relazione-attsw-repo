@@ -92,3 +92,21 @@ I task che vengono eseguiti sono:
 
 \section{Continuous Integration}
 
+Per entrambi i progetti è stata stabilita un link con i server di Travis-CI, in modo tale da poter eseguire le build complete in remoto e poter continuare a lavorare localmente sul software.\newline
+Le specifiche della build sono visualizzabili nel file .travis.yml, un file di configurazione che serve per dare direttive alla virtual machine su cui il progetto viene assemblato.\newline
+Fra le due versioni vi è una piccola differenza: nel progetto Maven, i server MongoDB sono stati simulati attraverso l'utilizzo di Docker; per poterlo utilizzare sulla piattaforma di Travis è necessario specificarlo fra i servizi desiderati in modo tale che esso possa venire scaricato e successivamente eseguito dal plugin fabric8 in fase di testing.\newline
+Nel progetto Gradle è stato invece utilizzato un plugin per avere un server MongoDB \textsl{embedded} nell'applicazione, pertanto non è stato necessario specificare l'utilizzo di Docker nel file .travis.
+
+\section{Frameworks}
+
+L'applicazione è stata sviluppata interamente utilizzando il framework \textsl{Spring Boot}, una delle varie soluzioni proposte dallo \textsl{Spring Framework} per la creazione di web-application in Java.\newline
+L'utilizzo del framework in questione oltre ad utilizzare il meccanismo di inversione del controllo proprio di Spring, permette di sviluppare applicazioni web in maniera molto rapida, rispetto all'approccio tradizionale basato su servlet.\newline\newline
+Uno degli aspetti più interessanti è appunto l'implementazione del meccanismo di \textsl{inversion of control} tramite la \textsl{dependency injection}. Dal momento che le applicazioni sviluppate con Spring Boot vengono eseguite in un web-container dove, al suo interno, viene a sua volta eseguito un server (Tomcat, in questo caso), utilizzando il meccanismo dei server embedded proprio di Spring.\newline\newline
+Dal momento che risulta pressoché impossibile avere un controllo totale sull'istanziazione degli oggetti una volta che l'applicazione viene lanciata, il meccanismo di \textsl{dependency injection} è di estrema importanza. Nelle applicazioni Spring Boot, al momento del loro avvio, viene caricato un \textsl{application-context} in cui sono contenute tutte le informazioni relative ai \textsl{Bean} che non sono stati inizializzati. Attraverso l'utilizzo di questo \textsl{contesto} è possibile dunque iniettare i \textsl{Bean} nei vari oggetti al momento dell'inizializzazione dell'applicazione. Spesso è necessario definire dei file di \textsl{configurazione} per fornire informazioni aggiuntive sui Bean da creare.
+\newline\newline
+Un'altra importante \textsl{feature} offerta da Spring Boot sono le API per i server MongoDB. Attraverso la specifica di un semplice Bean (mongoTemplate) e la definizione dell'indirizzo IP e la porta su cui esso deve girare, è possibile connettersi al server e utilizzarlo in maniera molto intuitiva, grazie anche all'interfaccia MongoRepository.\newline
+Altre feature degne di nota:
+\begin{itemize}
+	\item Thymeleaf: Template Engine utile per il rendering delle pagine HTML
+	\item Spring-Security: Permette di implementare un meccanismo di autenticazione basato su Username e Password
+\end{itemize}

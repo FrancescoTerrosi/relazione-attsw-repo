@@ -6,4 +6,6 @@
 \BOOKMARK [1][-]{section.2.2}{Build Automation}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.2.1}{Maven}{section.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.2}{Gradle}{section.2.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Conclusioni}{}% 9
+\BOOKMARK [1][-]{section.2.3}{Continuous Integration}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Frameworks}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Conclusioni}{}% 11
