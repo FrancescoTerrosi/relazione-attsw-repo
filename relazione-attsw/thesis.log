@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  22 APR 2019 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  22 APR 2019 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2326,15 +2326,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
-[13] [14]) [15]
+[13] [14])
+Underfull \hbox (badness 10000) in paragraph at lines 177--107
+
+ []
+
+[15] [16]
 \openout2 = `Chapters/Conclusioni.aux'.
 
- (./Chapters/Conclusioni.tex [16
-
-
-
-
-]
+ (./Chapters/Conclusioni.tex
 chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -2351,17 +2351,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-[17]) [18]
+[17
+
+
+
+
+]) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./thesis.aux (./titlePage.aux)
 (./Chapters/IntroduzioneAlSoftware.aux) (./Chapters/TecnicheStrumenti.aux)
-(./Chapters/Conclusioni.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./Chapters/Conclusioni.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
@@ -2370,7 +2370,7 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  38236 strings out of 492982
  726251 string characters out of 6134897
- 916216 words of memory out of 5000000
+ 917216 words of memory out of 5000000
  40671 multiletter control sequences out of 15000+600000
  617671 words of font info for 453 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2384,7 +2384,7 @@ nts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (19 pages, 280987 bytes).
+Output written on thesis.pdf (19 pages, 282508 bytes).
 PDF statistics:
  235 PDF objects out of 1000 (max. 8388607)
  195 compressed objects within 2 object streams
