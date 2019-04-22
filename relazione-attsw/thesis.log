@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  15 APR 2019 19:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  22 APR 2019 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2068,7 +2068,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 \openout2 = `titlePage.aux'.
 
  (./titlePage.tex
-<logo/LOGO.pdf, id=51, 996.72375pt x 483.8075pt>
+<logo/LOGO.pdf, id=55, 996.72375pt x 483.8075pt>
 File: logo/LOGO.pdf Graphic file (type pdf)
 <use logo/LOGO.pdf>
 Package pdftex.def Info: logo/LOGO.pdf  used on input line 10.
@@ -2147,7 +2147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
  []
 
 [3]
-<img/packages.png, id=102, 413.545pt x 235.88126pt>
+<img/packages.png, id=107, 413.545pt x 235.88126pt>
 File: img/packages.png Graphic file (type png)
 <use img/packages.png>
 Package pdftex.def Info: img/packages.png  used on input line 23.
@@ -2192,7 +2192,7 @@ Package microtype Info: Character `029' is missing
 ]
 chapter 2.
 [7]
-<img/maven-goals.png, id=122, 503.8825pt x 62.2325pt>
+<img/maven-goals.png, id=127, 503.8825pt x 62.2325pt>
 File: img/maven-goals.png Graphic file (type png)
 <use img/maven-goals.png>
 Package pdftex.def Info: img/maven-goals.png  used on input line 36.
@@ -2226,7 +2226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--46
  []
 
 [8 <./img/maven-goals.png>]
-<img/build-gradle.png, id=130, 602.25pt x 450.68375pt>
+<img/build-gradle.png, id=135, 602.25pt x 450.68375pt>
 File: img/build-gradle.png Graphic file (type png)
 <use img/build-gradle.png>
 Package pdftex.def Info: img/build-gradle.png  used on input line 49.
@@ -2243,7 +2243,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 48--52
  []
 
 [9 <./img/build-gradle.png>]
-<img/itest-gradle.png, id=136, 667.49374pt x 500.87125pt>
+<img/itest-gradle.png, id=141, 667.49374pt x 500.87125pt>
 File: img/itest-gradle.png Graphic file (type png)
 <use img/itest-gradle.png>
 Package pdftex.def Info: img/itest-gradle.png  used on input line 59.
@@ -2285,7 +2285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--66
  []
 
 [10 <./img/itest-gradle.png>]
-<img/gradle-build.png, id=142, 477.785pt x 31.11626pt>
+<img/gradle-build.png, id=147, 477.785pt x 31.11626pt>
 File: img/gradle-build.png Graphic file (type png)
 <use img/gradle-build.png>
 Package pdftex.def Info: img/gradle-build.png  used on input line 68.
@@ -2321,10 +2321,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--109
 
  []
 
-[12]) [13]
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
+
+ []
+
+[13] [14]) [15]
 \openout2 = `Chapters/Conclusioni.aux'.
 
- (./Chapters/Conclusioni.tex [14
+ (./Chapters/Conclusioni.tex [16
 
 
 
@@ -2346,23 +2351,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-[15]) [16]
+[17]) [18]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
  (./thesis.aux (./titlePage.aux)
 (./Chapters/IntroduzioneAlSoftware.aux) (./Chapters/TecnicheStrumenti.aux)
-(./Chapters/Conclusioni.aux))
+(./Chapters/Conclusioni.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F40ECF606430D8FC6E8FCA64B2EAC209;680.
+(rerunfilecheck)             Checksum: 21C46301CAA2799A29522F4E8A9C31E5;742.
  ) 
 Here is how much of TeX's memory you used:
- 38150 strings out of 492982
- 725435 string characters out of 6134897
+ 38236 strings out of 492982
+ 726251 string characters out of 6134897
  916216 words of memory out of 5000000
- 40668 multiletter control sequences out of 15000+600000
- 613120 words of font info for 389 fonts, out of 8000000 for 9000
+ 40671 multiletter control sequences out of 15000+600000
+ 617671 words of font info for 453 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,73p,10405b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -2374,10 +2384,10 @@ nts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (17 pages, 271571 bytes).
+Output written on thesis.pdf (19 pages, 280987 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 76931 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 76939 words of extra memory for PDF output out of 89155 (max. 10000000)
 

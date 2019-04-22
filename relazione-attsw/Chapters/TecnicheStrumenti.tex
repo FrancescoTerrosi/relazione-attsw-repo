@@ -109,4 +109,67 @@ Altre feature degne di nota:
 \begin{itemize}
 	\item Thymeleaf: Template Engine utile per il rendering delle pagine HTML
 	\item Spring-Security: Permette di implementare un meccanismo di autenticazione basato su Username e Password
+	\item JUnit: framework di testing per Unit e Integration tests incorporato in Eclipse
+	\item Cucumber: framework di testing per gli End-To-End tests.
+\end{itemize}
+
+\section{Software Design}
+
+Il software implementato consiste di un Server di cui viene esposta l'interfaccia Web, accedibile tramite i consueti metodi \textsl{http} (GET, POST\dots).\newline
+Inizialmente sono state definite le classi atte alla rappresentazione delle entità all'interno dell'applicazione nel pacchetto \textsl{org.unif.ft.rehearsal.model}:
+\begin{itemize}
+	\item BandDetails
+		\begin{itemize}
+			\item[$\rightarrow$] Classe che implementa l'interfaccia Spring \textsl{UserDetails}. In questa classe vengono salvate le informazioni relative a un singolo utente (che si suppone essere una band musicale). L'interfaccia \textsl{UserDetails} viene offerta da Spring come \textsl{template} per le classi che rappresentano gli utenti di un sistema.
+		\end{itemize}
+	\item Schedule
+	\begin{itemize}
+		\item[$\rightarrow$] Classe che definisce un modello per le prenotazioni. All'interno di questa classe possiamo trovare campi come: il nome della band (dell'utente) che effettua la prenotazione, data di inizio e fine, quale sala è stata prenotata\dots
+	\end{itemize}
+	\item RehearsalRoom
+	\begin{itemize}
+		\item[$\rightarrow$] Classe \textbf{ENUM} utilizzata per specificare il numero di stanze prenotabili nella sala prove.
+	\end{itemize}
+\end{itemize}
+
+Gli oggetti di tipo \textsl{BandDetails} e \textsl{Schedule} possono venire salvati a runtime in un database Mongo, rispettivamente nei repository:
+\begin{itemize}
+	\item IBandDetailsMongoRepository
+	\item IScheduleMongoRepository
+\end{itemize}
+La chiave primaria utilizzata è un oggetto di tipo \textsl{BigInteger} in previsione della moltitudine di record che questi possono avere.\newline\newline
+A runtime tuttavia, non è possibile accedere direttamente ai metodi offerti da queste interfacce ma bisogna accedervi attraverso dei \textsl{Services}.\newline
+Una classe che implementa un servizio può essere intuitivamente vista come un \textsl{wrapper} per uno specifico \textsl{repository}. Avendo a disposizione due differenti repository mongo, sono stati implementati i due seguenti servizi:
+\begin{itemize}
+	\item BandDetailsService
+	\begin{itemize}
+		\item[$\rightarrow$] Questa classe implementa uno \textsl{UserDetailsService}, implementazione necessaria per poter "immergere" questo servizio all'interno del framework Spring. Nella classe di configurazione della WebSecurity questo servizio viene specificato come \textsl{DaoAuthenticationProvider bean}, per permettere a Spring di sapere quale classe debba usare per l'autenticazione degli utenti. Questa classe utilizza un encoder BCrypt per criptare le password inserite dagli utenti.
+	\end{itemize}
+	\item Scheduler
+	\begin{itemize}
+		\item[$\rightarrow$] Classe che implementa le operazioni CRUD per gli oggetti di tipo \textsl{Schedule}
+	\end{itemize}
+\end{itemize}
+
+Per mantenere traccia delle varie operazioni effettuate dai \textsl{Services}, è stata utilizzata una utility di Logging: \textsl{Logback}. Questa scelta è stata fatta perché \textsl{Logback} è l'utility predefinita di Spring.\newline
+Sono stati definiti due differenti file di configurazione: uno per il logging in fase di testing (in cui i log vengono mostrati solamente su console) e uno per la fase di runtime, in cui le attività come: la registrazione di un utente, eventuali tentativi di accesso falliti (utili per rilevare tentativi di accesso illegali) e altri ancora vengono salvati in dei file di log utilizzando il protocollo di \textsl{logrotation}.\newline
+Per maggiori dettagli è possibile consultare i file di configurazione:
+\begin{itemize}
+	\item \textsl{src/main/resources/logback.xml}
+	\item \textsl{src/test/resources/logback-test.xml}
+\end{itemize}
+
+Una delle caratteristiche più interessanti di Spring è indubbiamente la possibilità di implementare feature piuttosto complesse come l'autenticazione, semplicemente andando a definire delle classi di configurazione.\newline
+All'interno di questo progetto possiamo trovare due classi di questo tipo nel pacchetto \textsl{org.unifi.ft.rehearsal.configurations}:
+\begin{itemize}
+	\item MongoConfig
+	\item WebSecurityConfig
+\end{itemize}
+
+La prima classe si occupa semplicemente di definire un \textsl{bean} MongoTemplate, un'implementazione della classe MongoOperation che implementa le principali operazioni su un mongoDB.\newline
+La seconda classe di configurazione, indubbiamente più interessante, si occupa invece delle specifiche tecniche di Security per l'applicazione. Di seguito vengono riassunti gli aspetti più interessanti che possiamo trovare al suo interno:
+\begin{itemize}
+	\item Il metodo \textsl{configure(HttpSecurity)} è responsabile di gran parte del lavoro. Al suo interno è possibile specificare quali richieste agli URL siano ad accesso pubblico e quali invece debbano essere protetti. Inoltre è possibile specificare quale sia la pagina di Login e gli identificativi dei form in cui vengono inseriti username e password. Questo aspetto è fondamentale in quanto a questo punto Spring si occuperà in maniera autonoma delle operazioni di autenticazione (è possibile notare infatti come nella classe \textsl{LoginPageWebController} sia presente soltanto il metodo responsabile di renderizzare la pagina HTML).
+	\item Il metodo \textsl{configure(WebSecurity)} si occupa invece non solo delle richieste ma del \textsl{contesto} generale dell'applicazione. In questo metodo si esclude dai controlli di security gli URI corrispondenti ai file css e alle pagine ad accesso pubblico come la \textsl{homepage} o la pagina di registrazione.
+	\item La classe privata \textsl{RehearsalAuthenticationSuccessHandler} è un'implementazione dell'interfaccia \textsl{AuthenticationSuccessHandler} offerta da Spring. Viene fatto un \textsl{override} del metodo \textsl{onAuthenticationSuccess} che viene invocato ogni volta che un'autenticazione ha successo di modo tale che venga fatto il \textsl{forward} di parametri come l'username di un utente che verranno poi utilizzati come attributi di sessione, oltre che effettuare il redirect alla pagina delle prenotazioni.
 \end{itemize}
