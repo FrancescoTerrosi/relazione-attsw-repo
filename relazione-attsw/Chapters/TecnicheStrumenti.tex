@@ -176,4 +176,39 @@ La seconda classe di configurazione, indubbiamente più interessante, si occupa 
 
 Come già stato detto all'inizio di questo paragrafo, il Server espone i propri servizi attraverso un'interfaccia web: questo viene realizzato tramite i \textsl{WebController} all'interno del pacchetto \textsl{org.unifi.ft.rehearsal.web}.\newline\newline
 Un Web Controller non è altro che un "mediatore" fra le operazioni fornite dalle classi di \textsl{service} e la rappresentazione grafica (html) di tali operazioni. Un Web Controller espone i servizi su degli endpoint http (e.g. /register), modifica il modello e aggiorna la vista da restituire all'utente; non a caso questo pattern viene chiamato Model View Controller ed è lo standard utilizzato da Spring.\newline
-Ad eccezion fatta per \textsl{LoginPageWebController} che si occupa solo di mostrare la pagina HTML di login ed eventualmente di aggiungere un messaggio di errore nel caso di mancata autenticazione, i due controller \textsl{RegisterPageWebController} e \textsl{SchedulePageWebController} presentano un buon esempio dell'utilizzo di questo pattern. È possibile apprezzare come tramite il template-engine \textsl{Thymeleaf} si possa manipolare il codice HTML delle viste da restituire all'utente grazie a semplice codice Java e a come le richieste http degli utenti, possibilmente contenenti anche diversi parametri, vengano mappati in dei metodi che vanno ad interagire sia con le viste che con i \textsl{Services} visti in precedenza.
+Ad eccezion fatta per \textsl{LoginPageWebController} che si occupa solo di mostrare la pagina HTML di login ed eventualmente di aggiungere un messaggio di errore nel caso di mancata autenticazione, i due controller \textsl{RegisterPageWebController} e \textsl{SchedulePageWebController} presentano un buon esempio dell'utilizzo di questo pattern. È inoltre possibile apprezzare come le richieste http degli utenti, possibilmente contenenti anche diversi parametri, vengano mappati in dei metodi che vanno ad interagire sia con le viste che con i \textsl{Services} visti in precedenza, tutto grazie alla gestione di Spring Boot dell'ambiente web e a come tramite il template-engine \textsl{Thymeleaf} si possa manipolare il codice HTML delle viste da restituire all'utente grazie a semplice codice Java.\newline
+La gestione degli eventuali errori da mostrare all'utente viene tutta fattorizzata in un singolo metodo: \textsl{addAttributeAndStatus} che viene invocato dai metodi annotati con l'annotazione \textbf{@ExceptionHandler(MyException.class)} e che riceve come parametro il messaggio che dev'essere inserito nella vista HTML.\newline\newline
+Di seguito vengono mostrate alcune schermate di esecuzione dell'applicazione.
+
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/homepage.png}
+	\captionof{figure}{Homepage della web application da cui è possibile registrarsi o effettuare il login, previa registrazione}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/register.png}
+	\captionof{figure}{Pagina di registrazione. È necessario inserire uno username (in caso di username già esistente questo viene rifiutato) e inserire due volte la password. Questa viene criptata dal PasswordEncoder presente in \textsl{BandDetailsService}. La richiesta viene effettuata tramite il metodo POST, mappato sull'endpoint /register}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/login.png}
+	\captionof{figure}{Pagina di Login dell'applicazione. Il metodo POST viene interamente gestito da Spring Boot, ragion per cui il Controller associato a questa vista si occupa solo di mostrare la pagina HTML}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/schedules.png}
+	\captionof{figure}{Effettiva pagina per lo scheduling delle prenotazioni. Per effettuare una prenotazione è necessario inserire una data valida composta da: anno, mese, giorno, ora, minuti (ricordiamo che la sala prove in questione è aperta h24). Dal momento che è possibile disdire in qualunque momento la prenotazione, non sono stati previsti metodi di pagamento che si suppone avvengano di persona.}
+\end{minipage}
+
+\vspace{1cm}
+
+\begin{minipage}{\linewidth}
+	\includegraphics[width=\textwidth]{img/findSchedule.png}
+	\captionof{figure}{Sono messi a disposizione diverse metodologie per ricercare gli appuntamenti fissati nella sala prove: per data, per sala di prenotazione oppure tramite il tasto "find your schedules" che mostra tutte le prenotazioni associate all'username attualmente collegato. Utilizzando questa opzione è possibile eliminare le proprie prenotazioni.}
+\end{minipage}
