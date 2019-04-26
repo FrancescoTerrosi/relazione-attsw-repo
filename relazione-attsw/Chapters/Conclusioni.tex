@@ -8,8 +8,10 @@ Uno degli aspetti più critici è stata senza dubbio la configurazione della Web
 
 \begin{minipage}{\linewidth}
 	\includegraphics[width=\textwidth]{img/websecurity.png}
-	\captionof{figure}{In questo modo vengono esclusi da \textbf{qualsiasi controllo} di web security i seguenti URL. Sarebbe stato possibile ottenere lo stesso risultato configurando il metodo \textsl{configure(HttpSecurity)} ma ciò avrebbe richiesto alcune operazioni sui test cases che sarebbero risultate estremamente artificiose in alcuni casi, soprattutto per la natura stessa degli unit-tests.}
+	\captionof{figure}{In questo modo vengono esclusi da \textbf{qualsiasi controllo} di web security tutti gli URL relativi alle \textsl{risorse} dell'applicazione (file HTML, CSS\dots). Se questo fosse stato fatto nel metodo \textsl{configure(HttpSecurity)} non sarebbe stato possibile utilizzare accedere alle pagine HTMl, utilizzare i webjars (Bootstrap nello specifico)}
 \end{minipage}
+
+\vspace{1cm}
 
 Un altro aspetto abbastanza problematico è stato l'utilizzo di un database per la gestione degli accessi degli utenti. È stato infatti necessario definire una classe che implementasse la classe Spring \textsl{UserDetailsService} per poter definire un \textsl{Bean} di tipo \textsl{DaoAuthenticationProvider} da utilizzare per l'autenticazione. Fortunatamente il problema è stato risolto abbastanza agilmente con il crescere della conoscenza del framework stesso.
 

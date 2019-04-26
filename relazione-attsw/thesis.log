@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  23 APR 2019 18:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  26 APR 2019 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2068,7 +2068,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 \openout2 = `titlePage.aux'.
 
  (./titlePage.tex
-<logo/LOGO.pdf, id=55, 996.72375pt x 483.8075pt>
+<logo/LOGO.pdf, id=63, 996.72375pt x 483.8075pt>
 File: logo/LOGO.pdf Graphic file (type pdf)
 <use logo/LOGO.pdf>
 Package pdftex.def Info: logo/LOGO.pdf  used on input line 10.
@@ -2147,7 +2147,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
  []
 
 [3]
-<img/packages.png, id=107, 413.545pt x 235.88126pt>
+<img/packages.png, id=117, 413.545pt x 235.88126pt>
 File: img/packages.png Graphic file (type png)
 <use img/packages.png>
 Package pdftex.def Info: img/packages.png  used on input line 23.
@@ -2192,7 +2192,7 @@ Package microtype Info: Character `029' is missing
 ]
 chapter 2.
 [7]
-<img/maven-goals.png, id=127, 503.8825pt x 62.2325pt>
+<img/maven-goals.png, id=137, 503.8825pt x 62.2325pt>
 File: img/maven-goals.png Graphic file (type png)
 <use img/maven-goals.png>
 Package pdftex.def Info: img/maven-goals.png  used on input line 36.
@@ -2226,7 +2226,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--46
  []
 
 [8 <./img/maven-goals.png>]
-<img/build-gradle.png, id=135, 602.25pt x 450.68375pt>
+<img/build-gradle.png, id=145, 602.25pt x 450.68375pt>
 File: img/build-gradle.png Graphic file (type png)
 <use img/build-gradle.png>
 Package pdftex.def Info: img/build-gradle.png  used on input line 49.
@@ -2243,7 +2243,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 48--52
  []
 
 [9 <./img/build-gradle.png>]
-<img/itest-gradle.png, id=141, 160.1985pt x 120.2091pt>
+<img/itest-gradle.png, id=151, 160.1985pt x 120.2091pt>
 File: img/itest-gradle.png Graphic file (type png)
 <use img/itest-gradle.png>
 Package pdftex.def Info: img/itest-gradle.png  used on input line 59.
@@ -2285,7 +2285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--66
  []
 
 [10 <./img/itest-gradle.png>]
-<img/gradle-build.png, id=147, 477.785pt x 31.11626pt>
+<img/gradle-build.png, id=158, 477.785pt x 31.11626pt>
 File: img/gradle-build.png Graphic file (type png)
 <use img/gradle-build.png>
 Package pdftex.def Info: img/gradle-build.png  used on input line 68.
@@ -2343,7 +2343,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--182
  []
 
 [15]
-<img/homepage.png, id=172, 1049.9225pt x 556.0775pt>
+<img/homepage.png, id=182, 1049.9225pt x 556.0775pt>
 File: img/homepage.png Graphic file (type png)
 <use img/homepage.png>
 Package pdftex.def Info: img/homepage.png  used on input line 184.
@@ -2360,7 +2360,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 183--187
  []
 
 [16]
-<img/register.png, id=177, 970.62625pt x 594.22pt>
+<img/register.png, id=187, 970.62625pt x 594.22pt>
 File: img/register.png Graphic file (type png)
 <use img/register.png>
 Package pdftex.def Info: img/register.png  used on input line 191.
@@ -2376,7 +2376,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 190--194
 []$[]$ 
  []
 
-<img/login.png, id=178, 891.33pt x 594.22pt>
+<img/login.png, id=188, 891.33pt x 594.22pt>
 File: img/login.png Graphic file (type png)
 <use img/login.png>
 Package pdftex.def Info: img/login.png  used on input line 198.
@@ -2392,7 +2392,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 197--201
  []
 
 [17 <./img/homepage.png> <./img/register.png>]
-<img/schedules.png, id=187, 1412.27625pt x 660.4675pt>
+<img/schedules.png, id=197, 1412.27625pt x 660.4675pt>
 File: img/schedules.png Graphic file (type png)
 <use img/schedules.png>
 Package pdftex.def Info: img/schedules.png  used on input line 205.
@@ -2408,7 +2408,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 204--208
 []$[]$ 
  []
 
-<img/findSchedule.png, id=188, 1404.24625pt x 697.60625pt>
+<img/findSchedule.png, id=198, 1404.24625pt x 697.60625pt>
 File: img/findSchedule.png Graphic file (type png)
 <use img/findSchedule.png>
 Package pdftex.def Info: img/findSchedule.png  used on input line 212.
@@ -2428,7 +2428,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 211--107
 
 
 (./Chapters/Conclusioni.tex
-<img/websecurity.png, id=204, 783.92876pt x 125.46875pt>
+<img/websecurity.png, id=214, 783.92876pt x 125.46875pt>
 File: img/websecurity.png Graphic file (type png)
 <use img/websecurity.png>
 Package pdftex.def Info: img/websecurity.png  used on input line 10.
@@ -2447,7 +2447,7 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 9--13
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 18--108
+Underfull \hbox (badness 10000) in paragraph at lines 20--108
 
  []
 
@@ -2462,41 +2462,31 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
 (./Chapters/Conclusioni.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 21C46301CAA2799A29522F4E8A9C31E5;742
-(rerunfilecheck)             After:  9A9ABEEA7566CFEED7FB9B5CB0399ADF;895.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 9A9ABEEA7566CFEED7FB9B5CB0399ADF;895.
  ) 
 Here is how much of TeX's memory you used:
- 38337 strings out of 492982
- 727544 string characters out of 6134897
+ 38342 strings out of 492982
+ 727624 string characters out of 6134897
  918216 words of memory out of 5000000
- 40701 multiletter control sequences out of 15000+600000
- 623762 words of font info for 503 fonts, out of 8000000 for 9000
+ 40702 multiletter control sequences out of 15000+600000
+ 624048 words of font info for 507 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,73p,10405b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/fpl/fplbj8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (22 pages, 432407 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/fpl/fplbj8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (22 pages, 432589 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 77481 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 77497 words of extra memory for PDF output out of 89155 (max. 10000000)
 
