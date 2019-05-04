@@ -24,7 +24,7 @@ Le specifiche di un progetto Maven vengono definite nel file "pom.xml".\newline
 All'interno di questo file è possibile definire alcune opzioni di configurazione del progetto (nome del gruppo e del progetto, versione di Java\dots) e, soprattutto, definire le dipendenze necessarie al corretto funzionamento del software e i plugin che specificano le operazioni da fare durante il processo di build.\newline
 Per adottare una sorta di approccio modulare anche nel processo di build del progetto, sono stati definiti diversi profili all'interno del pom.\newline
 Definire un profilo permette di incapsulare i plugin e le loro configurazioni al suo interno, in modo tale che queste vengano attaccate alla fase appropriata del lifecycle di Maven solamente quando richiesto.\newline
-Per separare le operazione di generazione dei report di \textsl{JaCoCo}, i \textsl{Mutation Tests}, gli \textsl{Integration Tests} e gli \textsl{End to End Tests} sono stati quindi definiti i profili:
+Per separare le operazioni di generazione dei report di \textsl{JaCoCo}, i \textsl{Mutation Tests}, gli \textsl{Integration Tests} e gli \textsl{End to End Tests} sono stati quindi definiti i profili:
 \begin{itemize}
 	\item jacoco
 	\item mutation
@@ -60,6 +60,26 @@ Uno degli aspetti fondamentali nella definizione di nuovi task Gradle è la loro
 	\captionof{figure}{Esempio di task definito dall'utente nel file itest.gradle}
 \end{minipage}
 \newline\newline
+
+Per questo progetto sono stati definiti i task:
+
+\begin{itemize}
+	\item itest
+		\begin{itemize}
+			\item[$\rightarrow$] Implementa un task per l'esecuzione degli integration tests
+		\end{itemize}
+	\item e2eTest
+	\begin{itemize}
+		\item[$\rightarrow$] Implementa un task per l'esecuzione degli end-to-end tests
+	\end{itemize}
+\end{itemize}
+
+È possibile eseguire i mutation test direttamente dalla build gradle semplicemente richiamando il task:
+\begin{itemize}
+	\item pitest
+\end{itemize}
+\vspace{0.5cm}
+
 Un altro degli aspetti fondamentali di Gradle è il massiccio utilizzo del Gradle Wrapper.\newline
 Il wrapper consente di poter effettuare build gradle senza averlo installato sulla propria macchina. Lavorando in team di sviluppo il vantaggio è ancora maggiore in quanto assicura che tutti i membri effettuino le build utilizzando la stessa versione di Gradle, senza bisogno di alcuna gestione aggiuntiva.\newline\newline
 Tutti i plugin e le dipendenze Maven del progetto sono state ritradotte in Gradle, per assicurare l'uniformità delle due versioni. Su travis, la build viene eseguita con il seguente comando:\newline
@@ -73,11 +93,11 @@ I task che vengono eseguiti sono:
 \begin{itemize}
 	\item build
 	\begin{itemize}
-		\item[$\rightarrow$] Configura la build e calcola il task graph, compila i file sorgente andando a scaricare le dipendenze, esegue i test e produce il fatjar dell'applicazione
+		\item[$\rightarrow$] Configura la build e calcola il task graph, compila i file sorgente andando a scaricare le dipendenze, esegue i test (unit, integration, end-to-end) e produce il fatjar dell'applicazione
 	\end{itemize}
 	\item jacocoTestReport
 	\begin{itemize}
-		\item[$\rightarrow$] Esegue JaCoCo per calcolare la code coverage
+		\item[$\rightarrow$] Esegue il task JaCoCo per calcolare la code coverage
 	\end{itemize}
 	\item coveralls
 	\begin{itemize}
@@ -152,7 +172,7 @@ Una classe che implementa un servizio può essere intuitivamente vista come un \
 \end{itemize}
 
 Per mantenere traccia delle varie operazioni effettuate dai \textsl{Services}, è stata utilizzata una utility di Logging: \textsl{Logback}. Questa scelta è stata fatta perché \textsl{Logback} è l'utility predefinita di Spring.\newline
-Sono stati definiti due differenti file di configurazione: uno per il logging in fase di testing (in cui i log vengono mostrati solamente su console) e uno per la fase di runtime, in cui le attività come: la registrazione di un utente, eventuali tentativi di accesso falliti (utili per rilevare tentativi di accesso illegali) e altri ancora vengono salvati in dei file di log utilizzando il protocollo di \textsl{logrotation}.\newline
+Sono stati definiti due differenti file di configurazione: uno per il logging in fase di testing (in cui i log vengono mostrati solamente su console) e uno per la fase di runtime, in cui le attività come: la registrazione di un utente, eventuali tentativi di accesso falliti (utili per rilevare tentativi di accesso illegali), errori a runtime etc. vengono salvati in dei file di log utilizzando il protocollo di \textsl{logrotation}.\newline
 Per maggiori dettagli è possibile consultare i file di configurazione:
 \begin{itemize}
 	\item \textsl{src/main/resources/logback.xml}
@@ -169,15 +189,15 @@ All'interno di questo progetto possiamo trovare due classi di questo tipo nel pa
 La prima classe si occupa semplicemente di definire un \textsl{bean} MongoTemplate, un'implementazione della classe MongoOperation che implementa le principali operazioni su un mongoDB.\newline
 La seconda classe di configurazione, indubbiamente più interessante, si occupa invece delle specifiche tecniche di Security per l'applicazione. Di seguito vengono riassunti gli aspetti più interessanti che possiamo trovare al suo interno:
 \begin{itemize}
-	\item Il metodo \textsl{configure(HttpSecurity)} è responsabile di gran parte del lavoro. Al suo interno è possibile specificare quali richieste agli URL siano ad accesso pubblico e quali invece debbano essere protetti. Inoltre è possibile specificare quale sia la pagina di Login e gli identificativi dei form in cui vengono inseriti username e password. Questo aspetto è fondamentale in quanto a questo punto Spring si occuperà in maniera autonoma delle operazioni di autenticazione (è possibile notare infatti come nella classe \textsl{LoginPageWebController} sia presente soltanto il metodo responsabile di renderizzare la pagina HTML).
-	\item Il metodo \textsl{configure(WebSecurity)} si occupa invece non solo delle richieste ma del \textsl{contesto} generale dell'applicazione. In questo metodo si esclude dai controlli di security gli URI corrispondenti ai file css e alle pagine ad accesso pubblico come la \textsl{homepage} o la pagina di registrazione.
+	\item Il metodo \textsl{configure(HttpSecurity)} è responsabile di gran parte del lavoro. Al suo interno è possibile specificare quali richieste agli URL siano ad accesso pubblico e quali invece necessitino di autenticazione. Per gli URL ad accesso pubblico vengono \textbf{comunque} effettuati dei check di sicurezza come ad esempio per la \textsl{cross-site request forgery}. È possibile inoltre specificare quale sia la pagina di Login e gli identificativi dei form in cui vengono inseriti username e password. Questo aspetto è fondamentale in quanto a questo punto Spring si occuperà in maniera autonoma delle operazioni di autenticazione (è possibile notare infatti come nella classe \textsl{LoginPageWebController} sia presente soltanto il metodo responsabile di renderizzare la pagina HTML).
+	\item Il metodo \textsl{configure(WebSecurity)} si occupa invece di definire quali URL debbano essere esclusi da \textbf{qualsiasi} controllo di sicurezza. Nello specifico viene esclusa tutta la cartella \textsl{resources} per la visualizzazione delle viste HTML e dei file css.
 	\item La classe privata \textsl{RehearsalAuthenticationSuccessHandler} è un'implementazione dell'interfaccia \textsl{AuthenticationSuccessHandler} offerta da Spring. Viene fatto un \textsl{override} del metodo \textsl{onAuthenticationSuccess} che viene invocato ogni volta che un'autenticazione ha successo di modo tale che venga fatto il \textsl{forward} di parametri come l'username di un utente che verranno poi utilizzati come attributi di sessione, oltre che effettuare il redirect alla pagina delle prenotazioni.
 \end{itemize}
 
 Come già stato detto all'inizio di questo paragrafo, il Server espone i propri servizi attraverso un'interfaccia web: questo viene realizzato tramite i \textsl{WebController} all'interno del pacchetto \textsl{org.unifi.ft.rehearsal.web}.\newline\newline
 Un Web Controller non è altro che un "mediatore" fra le operazioni fornite dalle classi di \textsl{service} e la rappresentazione grafica (html) di tali operazioni. Un Web Controller espone i servizi su degli endpoint http (e.g. /register), modifica il modello e aggiorna la vista da restituire all'utente; non a caso questo pattern viene chiamato Model View Controller ed è lo standard utilizzato da Spring.\newline
-Ad eccezion fatta per \textsl{LoginPageWebController} che si occupa solo di mostrare la pagina HTML di login ed eventualmente di aggiungere un messaggio di errore nel caso di mancata autenticazione, i due controller \textsl{RegisterPageWebController} e \textsl{SchedulePageWebController} presentano un buon esempio dell'utilizzo di questo pattern. È inoltre possibile apprezzare come le richieste http degli utenti, possibilmente contenenti anche diversi parametri, vengano mappati in dei metodi che vanno ad interagire sia con le viste che con i \textsl{Services} visti in precedenza, tutto grazie alla gestione di Spring Boot dell'ambiente web e a come tramite il template-engine \textsl{Thymeleaf} si possa manipolare il codice HTML delle viste da restituire all'utente grazie a semplice codice Java.\newline
-La gestione degli eventuali errori da mostrare all'utente viene tutta fattorizzata in un singolo metodo: \textsl{addAttributeAndStatus} che viene invocato dai metodi annotati con l'annotazione \textbf{@ExceptionHandler(MyException.class)} e che riceve come parametro il messaggio che dev'essere inserito nella vista HTML.\newline\newline
+Ad eccezion fatta per \textsl{LoginPageWebController} che si occupa solo di mostrare la pagina HTML di login ed eventualmente di aggiungere un messaggio di errore nel caso di mancata autenticazione, i due controller \textsl{RegisterPageWebController} e \textsl{SchedulePageWebController} presentano un buon esempio dell'utilizzo di questo pattern. È inoltre possibile apprezzare come le richieste http degli utenti, possibilmente contenenti anche diversi parametri, vengano mappati in dei metodi che vanno ad interagire sia con le viste che con i \textsl{Services} visti in precedenza (tutto grazie alla gestione di Spring Boot dell'ambiente web) e a come tramite il template-engine \textsl{Thymeleaf} si possa manipolare il codice HTML delle viste da restituire all'utente grazie a semplice codice Java.\newline
+La gestione degli eventuali errori da mostrare all'utente viene tutta fattorizzata in un singolo metodo: \textsl{addAttributeAndStatus} che viene invocato dai metodi annotati con l'annotazione \textbf{@ExceptionHandler(**Exception.class)} e che riceve come parametro il messaggio che dev'essere inserito nella vista HTML.\newline\newline
 Di seguito vengono mostrate alcune schermate di esecuzione dell'applicazione.
 
 \begin{minipage}{\linewidth}

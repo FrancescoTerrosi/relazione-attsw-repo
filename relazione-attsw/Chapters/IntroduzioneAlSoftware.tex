@@ -26,7 +26,12 @@ Il software è stato implementato utilizzando diverse tecniche di programmazione
 \newline
 
 L'applicazione è stata sviluppata utilizzando il \textsl{Framework Spring Boot}, grazie al quale è stata facilitata l'implementazione e la gestione di un database MongoDB (che consiste di due differenti repository: uno per gli utenti e uno per le prenotazioni) e l'esposizione dei metodi offerti dai vari \textsl{services} grazie ai Web Controller.\newline\newline
-Le operazioni sui repository sono implementati appunto dalle classi contenute in $org.unifi.ft.rehearsal.services$: BandService e Scheduler.\newline
+Le operazioni sui repository sono implementati appunto dalle classi contenute in $org.unifi.ft.rehearsal.services$:
+\begin{itemize}
+	\item BandService
+	\item Scheduler
+\end{itemize}
+
 BandService si occupa della gestione della registrazione nel sistema dei gruppi che vogliono usufruire della sala prove. Le operazioni possibili sono il salvataggio di un utente nel sistema e la ricerca di un determinato utente tramite \textsl{username}.\newline
 La classe Scheduler implementa invece le operazioni di salvataggio delle prenotazioni. Essendo questo servizio utilizzato dagli utenti sono fornite diverse operazioni per il salvataggio, la ricerca e la cancellazione.\newline\newline
 Come accennato all'inizio del paragrafo, questi servizi sono esposti tramite un'interfaccia web realizzata grazie al \textsl{framework Model View Controller} offerto da \textsl{Spring Boot}, di cui verrà approfondito il funzionamento nei paragrafi successivi.

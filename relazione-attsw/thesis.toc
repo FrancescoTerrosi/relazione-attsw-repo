@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {2.2}Build Automation}{7}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Maven}{7}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Gradle}{8}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Continuous Integration}{11}{section.2.3}
+\contentsline {section}{\numberline {2.3}Continuous Integration}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Frameworks}{12}{section.2.4}
 \contentsline {section}{\numberline {2.5}Software Design}{13}{section.2.5}
-\contentsline {section}{\numberline {2.6}Problemi durante lo sviluppo}{20}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Spring Boot}{20}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Gradle}{20}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.6}Problemi durante lo sviluppo}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Spring Boot}{21}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Gradle}{22}{subsection.2.6.2}

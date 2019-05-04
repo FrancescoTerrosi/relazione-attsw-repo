@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  26 APR 2019 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  4 MAY 2019 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2168,13 +2168,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--27
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 28--106
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--106
+)
+Underfull \hbox (badness 10000) in paragraph at lines 35--106
 
  []
 
@@ -2255,224 +2255,224 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
+Underfull \hbox (badness 10000) in paragraph at lines 54--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
+Underfull \hbox (badness 10000) in paragraph at lines 54--63
 
  []
 
 
-Overfull \hbox (2.65703pt too wide) in paragraph at lines 54--66
+Overfull \hbox (2.65703pt too wide) in paragraph at lines 54--63
  $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
+Underfull \hbox (badness 10000) in paragraph at lines 54--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
+Underfull \hbox (badness 10000) in paragraph at lines 54--63
 
  []
 
 [10 <./img/itest-gradle.png>]
-<img/gradle-build.png, id=158, 477.785pt x 31.11626pt>
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
+
+ []
+
+<img/gradle-build.png, id=159, 477.785pt x 31.11626pt>
 File: img/gradle-build.png Graphic file (type png)
 <use img/gradle-build.png>
-Package pdftex.def Info: img/gradle-build.png  used on input line 68.
+Package pdftex.def Info: img/gradle-build.png  used on input line 88.
 (pdftex.def)             Requested size: 384.1122pt x 25.01552pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 69.
+(caption)                particular \caption on input line 89.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 67--73
+Overfull \hbox (12.0pt too wide) in paragraph at lines 87--93
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 87--93
 
  []
 
 [11 <./img/gradle-build.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 122--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 122--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--109
+Underfull \hbox (badness 10000) in paragraph at lines 122--129
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 140--143
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 177--182
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 197--202
 
  []
 
 
-Overfull \hbox (31.26395pt too wide) in paragraph at lines 177--182
+Overfull \hbox (23.24796pt too wide) in paragraph at lines 197--202
 \T1/pplj/m/n/12 (-20) dai me-to-di an-no-ta-ti con l'an-no-ta-zio-ne \T1/pplj/b
-/n/12 @Ex-cep-tio-n-Hand-ler(MyException.class)
+/n/12 @Ex-cep-tio-n-Hand-ler(**Exception.class)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--182
+Underfull \hbox (badness 10000) in paragraph at lines 197--202
 
  []
 
-[15]
-<img/homepage.png, id=182, 1049.9225pt x 556.0775pt>
+[16]
+<img/homepage.png, id=186, 1049.9225pt x 556.0775pt>
 File: img/homepage.png Graphic file (type png)
 <use img/homepage.png>
-Package pdftex.def Info: img/homepage.png  used on input line 184.
+Package pdftex.def Info: img/homepage.png  used on input line 204.
 (pdftex.def)             Requested size: 384.1122pt x 203.43752pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 185.
+(caption)                particular \caption on input line 205.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 183--187
+Overfull \hbox (12.0pt too wide) in paragraph at lines 203--207
 []$[]$ 
  []
 
-[16]
 <img/register.png, id=187, 970.62625pt x 594.22pt>
 File: img/register.png Graphic file (type png)
 <use img/register.png>
-Package pdftex.def Info: img/register.png  used on input line 191.
+Package pdftex.def Info: img/register.png  used on input line 211.
 (pdftex.def)             Requested size: 384.1122pt x 235.15408pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 192.
+(caption)                particular \caption on input line 212.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 190--194
+Overfull \hbox (12.0pt too wide) in paragraph at lines 210--214
 []$[]$ 
  []
 
-<img/login.png, id=188, 891.33pt x 594.22pt>
+[17 <./img/homepage.png>]
+<img/login.png, id=194, 891.33pt x 594.22pt>
 File: img/login.png Graphic file (type png)
 <use img/login.png>
-Package pdftex.def Info: img/login.png  used on input line 198.
+Package pdftex.def Info: img/login.png  used on input line 218.
 (pdftex.def)             Requested size: 384.1122pt x 256.07178pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 199.
+(caption)                particular \caption on input line 219.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 197--201
+Overfull \hbox (12.0pt too wide) in paragraph at lines 217--221
 []$[]$ 
  []
 
-[17 <./img/homepage.png> <./img/register.png>]
-<img/schedules.png, id=197, 1412.27625pt x 660.4675pt>
+[18 <./img/register.png>]
+<img/schedules.png, id=202, 1412.27625pt x 660.4675pt>
 File: img/schedules.png Graphic file (type png)
 <use img/schedules.png>
-Package pdftex.def Info: img/schedules.png  used on input line 205.
+Package pdftex.def Info: img/schedules.png  used on input line 225.
 (pdftex.def)             Requested size: 384.1122pt x 179.62865pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 206.
+(caption)                particular \caption on input line 226.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 204--208
+Overfull \hbox (12.0pt too wide) in paragraph at lines 224--228
 []$[]$ 
  []
 
-<img/findSchedule.png, id=198, 1404.24625pt x 697.60625pt>
+<img/findSchedule.png, id=203, 1404.24625pt x 697.60625pt>
 File: img/findSchedule.png Graphic file (type png)
 <use img/findSchedule.png>
-Package pdftex.def Info: img/findSchedule.png  used on input line 212.
+Package pdftex.def Info: img/findSchedule.png  used on input line 232.
 (pdftex.def)             Requested size: 384.1122pt x 190.8151pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 213.
+(caption)                particular \caption on input line 233.
 See the caption package documentation for explanation.
 
 )
-Overfull \hbox (12.0pt too wide) in paragraph at lines 211--107
+Overfull \hbox (12.0pt too wide) in paragraph at lines 231--107
 []$[]$ 
  []
 
-[18 <./img/login.png> <./img/schedules.png>] [19 <./img/findSchedule.png>]
+[19 <./img/login.png> <./img/schedules.png>] [20 <./img/findSchedule.png>]
 \openout2 = `Chapters/Conclusioni.aux'.
 
 
 (./Chapters/Conclusioni.tex
-<img/websecurity.png, id=214, 783.92876pt x 125.46875pt>
+<img/websecurity.png, id=218, 841.1425pt x 501.875pt>
 File: img/websecurity.png Graphic file (type png)
 <use img/websecurity.png>
 Package pdftex.def Info: img/websecurity.png  used on input line 10.
-(pdftex.def)             Requested size: 384.1122pt x 61.4783pt.
+(pdftex.def)             Requested size: 384.1122pt x 229.18054pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 11.
+(caption)                particular \caption on input line 12.
 See the caption package documentation for explanation.
 
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 11.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 9--13
+Overfull \hbox (12.0pt too wide) in paragraph at lines 9--14
 []$[]$ 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 20--108
+[21
+
+
+ <./img/websecurity.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 21--108
 
  []
 
-[20
-
-
- <./img/websecurity.png>] [21]
+[22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
- (./thesis.aux (./titlePage.aux)
-(./Chapters/IntroduzioneAlSoftware.aux) (./Chapters/TecnicheStrumenti.aux)
-(./Chapters/Conclusioni.aux))
+ (./thesis.aux (./titlePage.aux) (./Chapters/IntroduzioneAlSoftware.aux)
+(./Chapters/TecnicheStrumenti.aux) (./Chapters/Conclusioni.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 9A9ABEEA7566CFEED7FB9B5CB0399ADF;895.
  ) 
 Here is how much of TeX's memory you used:
- 38342 strings out of 492982
- 727624 string characters out of 6134897
- 918216 words of memory out of 5000000
- 40702 multiletter control sequences out of 15000+600000
- 624048 words of font info for 507 fonts, out of 8000000 for 9000
+ 38328 strings out of 492982
+ 727455 string characters out of 6134897
+ 917216 words of memory out of 5000000
+ 40700 multiletter control sequences out of 15000+600000
+ 620546 words of font info for 495 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,73p,10405b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,14n,73p,10405b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-d
@@ -2483,10 +2483,10 @@ lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (22 pages, 432589 bytes).
+Output written on thesis.pdf (23 pages, 458789 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
- 77497 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 76985 words of extra memory for PDF output out of 89155 (max. 10000000)
 
