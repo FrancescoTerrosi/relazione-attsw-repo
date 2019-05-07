@@ -86,7 +86,8 @@ Tutti i plugin e le dipendenze Maven del progetto sono state ritradotte in Gradl
 
 \begin{minipage}{\linewidth}
 	\includegraphics[width=\textwidth]{img/gradle-build.png}
-	\captionof{figure}{Viene invocato il gradle wrapper per inizializzare la versione corretta di Gradle con cui eseguire la build del progetto}
+	\captionof{figure}{Viene invocato il gradle wrapper per inizializzare la versione corretta di Gradle con cui eseguire la build del progetto\newline
+	NB: È necessario eseguire il gradle wrapper dalla cartella di root del progetto}
 \end{minipage}
 \newline\newline
 I task che vengono eseguiti sono:
@@ -190,7 +191,11 @@ La prima classe si occupa semplicemente di definire un \textsl{bean} MongoTempla
 La seconda classe di configurazione, indubbiamente più interessante, si occupa invece delle specifiche tecniche di Security per l'applicazione. Di seguito vengono riassunti gli aspetti più interessanti che possiamo trovare al suo interno:
 \begin{itemize}
 	\item Il metodo \textsl{configure(HttpSecurity)} è responsabile di gran parte del lavoro. Al suo interno è possibile specificare quali richieste agli URL siano ad accesso pubblico e quali invece necessitino di autenticazione. Per gli URL ad accesso pubblico vengono \textbf{comunque} effettuati dei check di sicurezza come ad esempio per la \textsl{cross-site request forgery}. È possibile inoltre specificare quale sia la pagina di Login e gli identificativi dei form in cui vengono inseriti username e password. Questo aspetto è fondamentale in quanto a questo punto Spring si occuperà in maniera autonoma delle operazioni di autenticazione (è possibile notare infatti come nella classe \textsl{LoginPageWebController} sia presente soltanto il metodo responsabile di renderizzare la pagina HTML).
-	\item Il metodo \textsl{configure(WebSecurity)} si occupa invece di definire quali URL debbano essere esclusi da \textbf{qualsiasi} controllo di sicurezza. Nello specifico viene esclusa tutta la cartella \textsl{resources} per la visualizzazione delle viste HTML e dei file css.
+	\item Per l'esclusione delle \textsl{risorse} della applicazione (webjars inclusi) sarebbe stato possibile effettuare un \textsl{Override} del metodo \textsl{configure(WebSecurity)}. Tuttavia si è preferito utilizzare la possibilità offerta da Spring di definire una proprietà nel file \textsl{application.properties} che automaticamente esclude la cartella \textsl{resources} da qualsiasi controllo di sicurezza
+	\begin{itemize}
+		\item[$\rightarrow$] spring.resources.chain.strategy.content.enabled=true
+		\item[$\rightarrow$] spring.resources.chain.strategy.content.paths=/**
+	\end{itemize}
 	\item La classe privata \textsl{RehearsalAuthenticationSuccessHandler} è un'implementazione dell'interfaccia \textsl{AuthenticationSuccessHandler} offerta da Spring. Viene fatto un \textsl{override} del metodo \textsl{onAuthenticationSuccess} che viene invocato ogni volta che un'autenticazione ha successo di modo tale che venga fatto il \textsl{forward} di parametri come l'username di un utente che verranno poi utilizzati come attributi di sessione, oltre che effettuare il redirect alla pagina delle prenotazioni.
 \end{itemize}
 

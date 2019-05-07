@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  4 MAY 2019 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.9)  7 MAY 2019 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2289,59 +2289,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--86
 
  []
 
-<img/gradle-build.png, id=159, 477.785pt x 31.11626pt>
+<img/gradle-build.png, id=159, 114.6684pt x 7.4679pt>
 File: img/gradle-build.png Graphic file (type png)
 <use img/gradle-build.png>
 Package pdftex.def Info: img/gradle-build.png  used on input line 88.
-(pdftex.def)             Requested size: 384.1122pt x 25.01552pt.
+(pdftex.def)             Requested size: 384.1122pt x 25.01819pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 89.
+(caption)                particular \caption on input line 90.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 87--93
+Overfull \hbox (12.0pt too wide) in paragraph at lines 87--94
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--93
+Underfull \hbox (badness 10000) in paragraph at lines 87--94
 
  []
 
 [11 <./img/gradle-build.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 122--129
+Underfull \hbox (badness 10000) in paragraph at lines 123--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--129
+Underfull \hbox (badness 10000) in paragraph at lines 123--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--129
+Underfull \hbox (badness 10000) in paragraph at lines 123--130
 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
 
  []
 
 [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--207
 
  []
 
 
-Overfull \hbox (23.24796pt too wide) in paragraph at lines 197--202
+Overfull \hbox (23.24796pt too wide) in paragraph at lines 202--207
 \T1/pplj/m/n/12 (-20) dai me-to-di an-no-ta-ti con l'an-no-ta-zio-ne \T1/pplj/b
 /n/12 @Ex-cep-tio-n-Hand-ler(**Exception.class)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--207
 
  []
 
@@ -2349,31 +2349,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--202
 <img/homepage.png, id=186, 1049.9225pt x 556.0775pt>
 File: img/homepage.png Graphic file (type png)
 <use img/homepage.png>
-Package pdftex.def Info: img/homepage.png  used on input line 204.
+Package pdftex.def Info: img/homepage.png  used on input line 209.
 (pdftex.def)             Requested size: 384.1122pt x 203.43752pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 205.
+(caption)                particular \caption on input line 210.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 203--207
+Overfull \hbox (12.0pt too wide) in paragraph at lines 208--212
 []$[]$ 
  []
 
 <img/register.png, id=187, 970.62625pt x 594.22pt>
 File: img/register.png Graphic file (type png)
 <use img/register.png>
-Package pdftex.def Info: img/register.png  used on input line 211.
+Package pdftex.def Info: img/register.png  used on input line 216.
 (pdftex.def)             Requested size: 384.1122pt x 235.15408pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 212.
+(caption)                particular \caption on input line 217.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 210--214
+Overfull \hbox (12.0pt too wide) in paragraph at lines 215--219
 []$[]$ 
  []
 
@@ -2381,16 +2381,16 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 210--214
 <img/login.png, id=194, 891.33pt x 594.22pt>
 File: img/login.png Graphic file (type png)
 <use img/login.png>
-Package pdftex.def Info: img/login.png  used on input line 218.
+Package pdftex.def Info: img/login.png  used on input line 223.
 (pdftex.def)             Requested size: 384.1122pt x 256.07178pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 219.
+(caption)                particular \caption on input line 224.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 217--221
+Overfull \hbox (12.0pt too wide) in paragraph at lines 222--226
 []$[]$ 
  []
 
@@ -2398,31 +2398,31 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 217--221
 <img/schedules.png, id=202, 1412.27625pt x 660.4675pt>
 File: img/schedules.png Graphic file (type png)
 <use img/schedules.png>
-Package pdftex.def Info: img/schedules.png  used on input line 225.
+Package pdftex.def Info: img/schedules.png  used on input line 230.
 (pdftex.def)             Requested size: 384.1122pt x 179.62865pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 226.
+(caption)                particular \caption on input line 231.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 224--228
+Overfull \hbox (12.0pt too wide) in paragraph at lines 229--233
 []$[]$ 
  []
 
 <img/findSchedule.png, id=203, 1404.24625pt x 697.60625pt>
 File: img/findSchedule.png Graphic file (type png)
 <use img/findSchedule.png>
-Package pdftex.def Info: img/findSchedule.png  used on input line 232.
+Package pdftex.def Info: img/findSchedule.png  used on input line 237.
 (pdftex.def)             Requested size: 384.1122pt x 190.8151pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 233.
+(caption)                particular \caption on input line 238.
 See the caption package documentation for explanation.
 
 )
-Overfull \hbox (12.0pt too wide) in paragraph at lines 231--107
+Overfull \hbox (12.0pt too wide) in paragraph at lines 236--107
 []$[]$ 
  []
 
@@ -2431,11 +2431,11 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 231--107
 
 
 (./Chapters/Conclusioni.tex
-<img/websecurity.png, id=218, 841.1425pt x 501.875pt>
+<img/websecurity.png, id=218, 201.8742pt x 101.6598pt>
 File: img/websecurity.png Graphic file (type png)
 <use img/websecurity.png>
 Package pdftex.def Info: img/websecurity.png  used on input line 10.
-(pdftex.def)             Requested size: 384.1122pt x 229.18054pt.
+(pdftex.def)             Requested size: 384.1122pt x 193.45964pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -2467,12 +2467,12 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  38328 strings out of 492982
- 727455 string characters out of 6134897
+ 727460 string characters out of 6134897
  917216 words of memory out of 5000000
  40700 multiletter control sequences out of 15000+600000
- 620546 words of font info for 495 fonts, out of 8000000 for 9000
+ 620551 words of font info for 495 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,14n,73p,10405b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,73p,10405b,903s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-d
@@ -2483,7 +2483,7 @@ lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (23 pages, 458789 bytes).
+Output written on thesis.pdf (23 pages, 449789 bytes).
 PDF statistics:
  279 PDF objects out of 1000 (max. 8388607)
  221 compressed objects within 3 object streams
